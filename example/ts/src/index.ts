@@ -31,6 +31,7 @@ function queryBooks() {
   queryBooksRequest.setAuthorPrefix("Geor");
   const client = grpc.client(BookService.QueryBooks, {
     host: host,
+    transport: grpc.WebsocketTransportFactory,
   });
   client.onHeaders((headers: grpc.Metadata) => {
     console.log("queryBooks.onHeaders", headers);

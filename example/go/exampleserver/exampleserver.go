@@ -37,7 +37,9 @@ func main() {
 	library.RegisterBookServiceServer(grpcServer, &bookService{})
 	grpclog.SetLogger(log.New(os.Stdout, "exampleserver: ", log.LstdFlags))
 
-	wrappedServer := grpcweb.WrapServer(grpcServer)
+	wrappedServer := grpcweb.WrapServer(grpcServer,
+		grpcweb.WithWebsockets(true),
+		grpcweb.WithWebsocketOriginFunc(func(req *http.Request) bool { return true }))
 	handler := func(resp http.ResponseWriter, req *http.Request) {
 		wrappedServer.ServeHTTP(resp, req)
 	}
