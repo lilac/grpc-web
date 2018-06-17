@@ -10,8 +10,8 @@
     "ptypes/duration",
     "ptypes/timestamp"
   ]
-  revision = "925541529c1fa6821df4e44ce2723319eb2be768"
-  version = "v1.0.0"
+  revision = "b4deda0973fb4c70b50d226b1af49f3da59f5265"
+  version = "v1.1.0"
 
 [[projects]]
   name = "github.com/gorilla/websocket"
@@ -106,6 +106,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "7c4005512c7bcf970b40141c089e3e607d96b953116641c4635299f5a35acdb7"
+  inputs-digest = "28d91800065f2be6ee491f61d09889b3e44f9678984fe83b7b8210eea5bc47a9"
   solver-name = "gps-cdcl"
   solver-version = 1
