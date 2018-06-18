@@ -25,6 +25,7 @@ function getBook() {
 }
 
 getBook();
+queryBooks();
 
 function queryBooks() {
   const queryBooksRequest = new QueryBooksRequest();
